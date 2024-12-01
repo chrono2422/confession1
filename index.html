@@ -4,7 +4,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Will You Be My Girlfriend?</title>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #ffcccc, #ffe6e6);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .container {
+            text-align: center;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            color: #ff5c5c;
+            font-size: 2.5rem;
+        }
+
+        .message {
+            color: #333;
+            font-size: 1.2rem;
+            margin: 20px 0;
+        }
+
+        .buttons button {
+            background: #ff5c5c;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 10px;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .buttons button:hover {
+            background: #e14e4e;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
@@ -12,15 +59,19 @@
         <p class="message">Dear [Her Name],<br>
             Every moment with you feels magical. You make my world brighter, and I can't imagine it without you. Will you be my girlfriend?</p>
         <div class="buttons">
-            <button onclick="showResponse('yes')">Yes, I'd love to!</button>
-            <button onclick="showResponse('talk')">Let’s Talk About It</button>
+            <button onclick="navigateTo('yes')">Yes, I'd love to!</button>
+            <button onclick="navigateTo('talk')">Let’s Talk About It</button>
         </div>
     </div>
 
-    <div class="response hidden" id="response">
-        <p id="responseText"></p>
-    </div>
-
-    <script src="script.js"></script>
+    <script>
+        function navigateTo(answer) {
+            if (answer === 'yes') {
+                window.location.href = "yes.html";
+            } else if (answer === 'talk') {
+                window.location.href = "talk.html";
+            }
+        }
+    </script>
 </body>
 </html>
