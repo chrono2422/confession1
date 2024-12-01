@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will You Be My Girlfriend?</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Will You Be My Girlfriend?</h1>
+        <p class="message">Dear [Her Name],<br>
+            Every moment with you feels magical. You make my world brighter, and I can't imagine it without you. Will you be my girlfriend?</p>
+        <div class="buttons">
+            <button onclick="showResponse('yes')">Yes, I'd love to!</button>
+            <button onclick="showResponse('talk')">Let’s Talk About It</button>
+        </div>
+    </div>
+
+    <div class="response hidden" id="response">
+        <p id="responseText"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
