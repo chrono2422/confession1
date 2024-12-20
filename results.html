@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Dinner Date</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f9f9f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            text-align: center;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            max-width: 600px;
+        }
+
+        h1 {
+            color: #333;
+            font-size: 2rem;
+        }
+
+        p {
+            color: #555;
+            font-size: 1.2rem;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Your Dinner Date Choices</h1>
+        <p id="cuisine"></p>
+        <p id="dessert"></p>
+    </div>
+    <script>
+        // Get the query parameters from the URL
+        const params = new URLSearchParams(window.location.search);
+        const cuisine = params.get('cuisine');
+        const dessert = params.get('dessert');
+
+        // Display the choices
+        document.getElementById('cuisine').textContent = `Cuisine: ${cuisine}`;
+        document.getElementById('dessert').textContent = `Dessert: ${dessert}`;
+    </script>
+</body>
+</html>
