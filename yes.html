@@ -9,7 +9,7 @@
             font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background: linear-gradient(to bottom, #ffe6b3, #ffcc80);
+            background: linear-gradient(to bottom, #bde1fc, #80c8ff);
             display: flex;
             justify-content: center;
             align-items: center;
@@ -50,26 +50,31 @@
     <div class="container">
         <h1>You Said Yes! 🎉</h1>
         <p>You’ve made me the happiest person ever! Now let’s plan our first dinner date. Choose your favorite cuisine:</p>
-        <ul>
-            <input type="checkbox"> Japanese (Sushi, Ramen)<br><br>
-            <input type="checkbox"> Italian (Pizza, Pasta)<br><br>
-            <input type="checkbox"> Mexican (Tacos, Burritos)<br><br>
-            <input type="checkbox"> Mediterranean (Hummus, Falafel)<br><br>
-            <input type="checkbox"> American (Burgers, Fries)<br><br>
-            <input type="checkbox"> Chinese (Mala, Skewers)<br><br>
-            <input type="checkbox"> French (Pastries, Fine dining)<br><br>
-            <input type="checkbox"> Bars<br><br>
-            <input type="checkbox"> Spanish (Paella, Tapas)<br><br>
-            <input type="checkbox"> Mexican (Tacos, quesadillas)<br><br>
-            <input type="checkbox"> Steakhouse (Steak, Lamb, Chicken)<br><br>
-        </ul>
-        <p class="section-title">After-Dinner Dessert Options 🍰</p>
-        <p>Make the evening sweeter with one of these dessert options:</p>
-        <ul>
-            <input type="checkbox">🍧 **Artisanal Ice Cream**: Unique flavors like durian, salted egg yolk, or matcha.<br><br>
-            <input type="checkbox">🍮 **Asian Desserts**: Ice kachang, durian paste.<br><br>
-            <input type="checkbox">🍩 **Western Desserts**: Lava cake, waffles with gelato, or cheesecakes.<br><br>
-        </ul>
+        <form action="results.html" method="GET">
+            <div class="form-section">
+                <label for="cuisine">Choose your favorite cuisine:</label>
+                <select id="cuisine" name="cuisine">
+                    <option value="japanese">Japanese Cuisine</option>
+                    <option value="italian">Italian Cuisine</option>
+                    <option value="chinese">Chinese Cuisine</option>
+                    <option value="mexican">Mexican Cuisine</option>
+                    <option value="korean">Korean BBQ</option>
+                    <option value="thai">Thai Cuisine</option>
+                    <option value="american">American Cuisine</option>
+                    <option value="steakhouse">Steakhouse</option>
+                    <option value="bars">Bars</option>
+                </select>
+            </div>
+            <div class="form-section">
+                <label for="dessert">Choose your favorite dessert:</label>
+                <select id="dessert" name="dessert">
+                    <option value="ice-cream">Artisanal Ice Cream</option>
+                    <option value="western-desserts">Western Desserts</option>
+                    <option value="asian-desserts">Asian Desserts</option>
+                </select>
+            </div>
+            <button type="submit" class="submit-button">Submit</button>
+        </form>
     </div>
 </body>
 </html>
