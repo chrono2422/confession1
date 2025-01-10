@@ -44,6 +44,11 @@
         <p><strong id="chosen-cuisine"></strong> cuisine for dinner</p>
         <p>and end the night with <strong id="chosen-dessert"></strong> for dessert.</p>
     </div>
+    <script>
+        // Get the query parameters from the URL
+        const params = new URLSearchParams(window.location.search);
+        const cuisine = params.get('cuisine');
+        const dessert = params.get('dessert');
 
         // Display the choices
         document.getElementById('chosen-cuisine').textContent = cuisine || 'something delicious';
