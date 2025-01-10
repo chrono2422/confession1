@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Dinner Date</title>
+    <title>See You at 7 PM</title>
     <style>
         body {
             font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background: #f9f9f9;
+            background: linear-gradient(to bottom, #a2d9ff, #d6f5ff);
             display: flex;
             justify-content: center;
             align-items: center;
@@ -26,12 +26,12 @@
         }
 
         h1 {
-            color: #333;
-            font-size: 2rem;
+            color: #0073e6;
+            font-size: 2.5rem;
         }
 
         p {
-            color: #555;
+            color: #333;
             font-size: 1.2rem;
             margin: 20px 0;
         }
@@ -39,9 +39,10 @@
 </head>
 <body>
     <div class="container">
-        <h1>Your Dinner Date Choices</h1>
-        <p id="cuisine"></p>
-        <p id="dessert"></p>
+        <h1>See You at 7 PM! ❤️</h1>
+        <p>We’ll enjoy:</p>
+        <p><strong id="chosen-cuisine"></strong> cuisine for dinner</p>
+        <p>and end the night with <strong id="chosen-dessert"></strong> for dessert.</p>
     </div>
     <script>
         // Get the query parameters from the URL
@@ -50,8 +51,8 @@
         const dessert = params.get('dessert');
 
         // Display the choices
-        document.getElementById('cuisine').textContent = `Cuisine: ${cuisine}`;
-        document.getElementById('dessert').textContent = `Dessert: ${dessert}`;
+        document.getElementById('chosen-cuisine').textContent = cuisine || 'something delicious';
+        document.getElementById('chosen-dessert').textContent = dessert || 'a sweet surprise';
     </script>
 </body>
 </html>
