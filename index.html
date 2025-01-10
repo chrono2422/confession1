@@ -35,21 +35,42 @@
             font-size: 1.2rem;
             margin: 20px 0;
         }
+        
+        .button-container {
+            margin-top: 20px;
+        }
 
-        .buttons button {
-            background: #ff5c5c;
+        .yes-button {
+            background: #ff6f91;
             color: white;
+            font-size: 1.5rem; /* Bigger font size */
+            padding: 15px 30px; /* Bigger padding */
             border: none;
-            padding: 10px 20px;
-            margin: 10px;
             border-radius: 5px;
-            font-size: 1rem;
             cursor: pointer;
+            margin: 10px;
+            transition: background 0.3s ease, transform 0.2s ease;
+        }
+
+        .yes-button:hover {
+            background: #ff4874;
+            transform: scale(1.05); /* Slight zoom effect on hover */
+        }
+
+        .no-button {
+            background: #e0e0e0;
+            color: #333;
+            font-size: 1rem; /* Smaller font size */
+            padding: 10px 20px; /* Smaller padding */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px;
             transition: background 0.3s ease;
         }
 
-        .buttons button:hover {
-            background: #6b1a22;
+        .no-button:hover {
+            background: #bdbdbd;
         }
     </style>
 </head>
@@ -57,10 +78,10 @@
     <div class="container">
         <h1>Can You Be My Girlfriend?</h1>
         <p class="message">Dear Jia Yuan,<br>
-            It's been a long time coming but I finally get to ask you this question! Can you be my girlfriend? 🥺🥺</p>
+            It's been a long time coming but I finally get to ask you this question! Can you be my girlfriend? 💖💖🥺🥺</p>
         <div class="buttons">
-            <button onclick="navigateTo('yes')">Yes, I'd love to!</button>
-            <button onclick="navigateTo('talk')">Do not select this please!</button>
+            <button class="yes-button" onclick="window.location.href='yes.html'">Yes, I'd Love To!</button>
+            <button class="no-button" onclick="window.location.href='invalid.html'">Invalid Choice and PLEASE DO NOT CHOOSE THIS!!</button>
         </div>
     </div>
 
